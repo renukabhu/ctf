@@ -11,7 +11,7 @@ This challenge gave the sourcecode(shown at the end of this writeup) and the url
  
 In this section of the website's sourcecode, we see the filters handled by the website. The first one, '127' prevents us from getting output from a local host address. The second filter does not allow two dots in a url, preventing us from getting output from addresses such as '0.0.0.0' or '127.0.0.1'. Next, any links with x in them will return the response "I don't like twitter >:(". This filter probably just exists for fun. Lastly, the filter 'flag' prevents us from inputting any urls with the word 'flag' in them.  <br>
 
-My initial thought when seeing this challenge was that we somehow needed to input '0.0.0.0/flag' or 'http://localhost/flag' into the website to receive the flag. However, any input into the website that contains the word 'flag' will just return the response "It's not gonna be that easy :). " Initially, we thought the corrent solution to this problem was to create a redirect to this address, which led me to embark on the journey of creating my first website shown below.  
+My initial thought when seeing this challenge was that we somehow needed to input '0.0.0.0/flag' or 'http://localhost:1337/flag' into the website to receive the flag. However, any input into the website that contains the word 'flag' will just return the response "It's not gonna be that easy :). " Initially, we thought the corrent solution to this problem was to create a redirect to this address, which led me to embark on the journey of creating my first website shown below.  
 
 
 
