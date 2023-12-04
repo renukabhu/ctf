@@ -13,7 +13,18 @@ My initial thought when seeing this challenge was that we somehow needed to inpu
 
 
 Unfortunately, while this was an important learning experience, it was not the solution to the challenge. After inputting my url which 
-redirected to 0.0.0.0/flag, I realized that the Python function requests.get does not do redirects. 
+redirected to 0.0.0.0/flag, I realized that the Python function requests.get does not do redirects. The final solution we found was actually to encode the word 'flag' into base 16 and replace 'flag' with the base 16 version in the url. To accomplish this, we first inputted the word 'flag' into a base 16 encoder(https://simplycalc.com/base16-encode.php) which gave the output shown below.
+
+
+<img width="409" alt="Screen Shot 2023-12-04 at 1 34 28 AM" src="https://github.com/renukabhu/ctf/assets/147457857/96ee7fb3-17c5-41d1-8e94-d2a34d14c19f">
+
+
+After this, we replaced 'flag' with the output given in the url, seperating each set of characters representing a letter with a '%' before it to indicate that the following characters are encoded in base 16. This led us to the final url to input into the secret tunnel website:
+http://localhost:1337/%66%6C%61%67. Inputting this url into the secret tunnel website gave us the first twenty characters shown on that url which is the flag!
+
+
+<img width="486" alt="Screen Shot 2023-12-04 at 1 43 46 AM" src="https://github.com/renukabhu/ctf/assets/147457857/a1c3c86d-f92d-48b7-b240-329d79aad5cf">
+
 
 <img width="797" alt="Screen Shot 2023-12-02 at 2 40 32 PM" src="https://github.com/renukabhu/ctf/assets/147457857/2b831614-c1d3-45ed-b467-a0337ff4ecbc">
 
