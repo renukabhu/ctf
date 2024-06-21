@@ -1,4 +1,4 @@
-# Mcqueen Login
+# Mcqueen Login - Cyber Academy S24
 
 McQueen Login is a challenge where a JWT needs to be changed to get the flag. The first thing I did when looking at the challenge was inspect element to get the original JWT:
 
